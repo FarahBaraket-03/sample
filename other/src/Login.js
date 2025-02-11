@@ -34,7 +34,6 @@ const Login = () => {
           { email , password },
           { withCredentials: true } //  Important: Enables sending/receiving cookies
         )
-        setCookie("jwt", response.data.token, { path: "/", maxAge: 3 * 24 * 60 * 60*1000 });
         Swal.fire("Login Successful!", `Welcome`, "success").then(()=>{
             navigate('/');
         });
